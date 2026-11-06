@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #f7fafc; /* Um fundo cinza claro mais moderno */
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -9,38 +9,86 @@ body {
 .container {
   background: white;
   padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px; /* Bordas mais arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
   width: 320px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
   margin-top: 12px;
   font-weight: bold;
+  color: #4a5568; /* Cinza escuro para melhor leitura */
 }
 
 input {
   width: 100%;
-  padding: 8px;
-  margin-top: 4px;
+  padding: 10px;
+  margin-top: 6px;
   box-sizing: border-box;
+  border: 2px solid #e2e8f0; /* Borda suave */
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease; /* Transição suave ao clicar */
+}
+
+/* Cor azul quando o usuário clica para digitar no campo */
+input:focus {
+  border-color: #3182ce;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
 }
 
 button {
-  margin-top: 16px;
-  padding: 10px;
+  margin-top: 20px;
+  padding: 12px;
   width: 100%;
-  background-color: #2b6cb0;
+  background-color: #3182ce; /* Azul vibrante */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Efeito de cor ao passar o mouse no botão */
+button:hover {
+  background-color: #2b6cb0; /* Azul um pouco mais escuro */
 }
 
 #resultado {
-  margin-top: 16px;
+  margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f8fafc; /* Caixinha de fundo para o resultado */
+}
+
+/* Cores de feedback controladas pelo JavaScript */
+.aprovado {
+  color: #2f855a; /* Verde escuro */
+}
+
+.recuperacao {
+  color: #dd6b20; /* Laranja vibrante */
+}
+
+.reprovado {
+  color: #e53e3e; /* Vermelho vibrante */
+}
+
+.erro {
+  color: #e53e3e;
+  font-size: 14px;
 }
